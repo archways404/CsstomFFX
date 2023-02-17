@@ -40,22 +40,40 @@ if not os.path.exists(path_to_userprofile_folder + "/chrome"):
 rw_path = path_to_userprofile_folder + "/chrome"
 
 # Check if the right files exist within the folder (rw_path) - i.e pictures etc.
-#if it does not exist, download them from github
+# if it does not exist, download them from github
 
 # Reading the file
-rw_path_css = rw_path + "/userChrome.css"
 
-if os.path.exists(rw_path_css):
-    print("warning: userChrome.css already exists within the chrome folder - continuing will overwrite it")
+# Defines the path to the file within the folder
+path_css = rw_path + "/userChrome.css"
+path_cfg = rw_path + "/csstomUI.txt"
+
+
+# Check if the userChrome.css file exists, and then creates it if it does not
+if os.path.exists(path_css):
+    print("warning: userChrome.css already exists within the chrome folder")
 else:
-    with open(rw_path_css, "w") as fp:
+    with open(path_css, "w") as fp:
         fp.write("")
+# Writes empty space in the file
+
+# Check if the config file exists, and then creates it if it does not
+if os.path.exists(path_cfg):
+    print("warning: csstomUI config file already exists within the chrome folder")
+else:
+    with open(path_cfg, "w") as fp:
+        fp.write("")
+# Writes empty space in the file
+
+
 
 
 
 
 # Library of settings
-#   Matching true or false on each setting & displaying in in the GUI as such
+#   Matching true or false on each setting & displaying in in the GUI as such - config.py hosts the settings
+
+
 
 # Variables for the changes that the user has made in the GUI
 
