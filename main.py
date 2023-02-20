@@ -35,7 +35,7 @@ print(path_to_userprofile_folder)
 # exist or not.
 if not os.path.exists(path_to_userprofile_folder + "/chrome"):
     # if the chrome folder is not present 
-    # then create it.
+    # then create it
     os.makedirs(path_to_userprofile_folder + "/chrome")
 
 rw_path = path_to_userprofile_folder + "/chrome"
