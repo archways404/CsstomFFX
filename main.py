@@ -1,4 +1,5 @@
 import os
+import shutil
 #import customtkinter
 
 #customtkinter.set_appearance_mode("dark")
@@ -24,7 +25,7 @@ import os
 
 #root.mainloop()
 
-# GRAPHICAL SETUP - IGNORE FOR NOW
+# GRAPHICAL SETUP - IGNORE FOR NOW ***********************************************************************************************************************************************
  
 path_to_userprofile_folder = input("Enter the full path to your profile folder: ")
 print(path_to_userprofile_folder)
@@ -63,15 +64,42 @@ if os.path.exists(path_cfg):
 else:
     with open(path_cfg, "w") as fp:
         fp.write("")
-# Writes empty space in the file
+        shutil.copyfile('csstomUI-source.txt','csstomUI.txt')
+        ft_setup_q0 = input("Do you wish to see example setups? (1 or 0): ")
+        if ft_setup_q0 == "1":
+            show_setup_examples = True
+
+        ft_setup_q1 = input("Do you wish to use a one-line UI? (1 or 0): ")
+        if ft_setup_q1 == "1":
+            OneLineUI = True
+        
+        ft_setup_q2 = input("Sideload the tabs? (1 or 0): ")
+        if ft_setup_q2 == "1":
+            Sideload = True
+        
+# Writes empty space in the file & if first time opening file, asks user for input
+
+# 
+# Variables (stored to be used later in the code)
+#      
+
+# show_setup_examples
+# OneLineUI
+# Sideload 
+        
 
 
 
 
 
 
-# Library of settings
-#   Matching true or false on each setting & displaying in in the GUI as such - config.py hosts the settings
+
+
+
+
+
+# Library of settings 
+#   Matching true or false on each setting & displaying in in the GUI as such - ccstomUI.txt hosts the settings
 
 
 
